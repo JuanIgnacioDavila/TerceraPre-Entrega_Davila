@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block contenido_variable %}
+
+<form action="{% url 'AppEntregaTienda' %}" method="post">
+    {% csrf_token %}
+    <h2>Registro tienda: </h2>
+    {{tiendaform.as_p}}
+      
+    <input type="submit" value="Registrar">
+</form>
+<br><hr>
+<h2>Buscar tienda:</h2>
+<form action="{% url 'AppEntregaBusquedaT' %}">
+    {{buscartienda.as_p}}
+    <input type="submit" value="Buscar">
+</form>
+
+
+{% endblock %}

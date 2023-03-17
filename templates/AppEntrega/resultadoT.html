@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block contenido_variable %}
+{% if filtro %}
+{% for f in filtro %}
+<p><b>Nombre: </b>{{f.nombre}}</p>
+<p><b>Direccion: </b>{{f.direccion}}</p>
+<p><b>Telefono: </b>{{f.telefono}}</p>
+{% endfor %}
+{% else %}
+<h4>No hay informacion</h4>
+{% endif %}
+{% endblock %}
